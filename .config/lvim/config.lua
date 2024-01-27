@@ -31,6 +31,8 @@ else
   liblldb_path = liblldb_path .. (this_os == "Linux" and ".so" or ".dylib")
 end
 
+lvim.builtin.which_key.mappings["s"]["w"] = { "<cmd>Telescope grep_string<cr>", "Find word" }
+
 pcall(function()
   require("rust-tools").setup {
     tools = {
